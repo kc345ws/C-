@@ -27,5 +27,5 @@ void Polynomial::Add()
 		cout << Sum << endl;
 	else
 		cout << "³¬³ö·¶Î§" << endl;
-	
+	Polynomial::Sumadd = Sum;
 }
