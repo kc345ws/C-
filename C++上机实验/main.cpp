@@ -110,7 +110,7 @@ int main()
 		
 			Polynomial *pol2 = (*pol + *pol1);
 			pol2->Show();
-		
+			cout << endl;
 			break;
 			}
 		case 2:
@@ -119,6 +119,7 @@ int main()
 			/*cout << (pol->ReSum() - pol1->ReSum()) << endl;*/
 			Polynomial *pol2 = (*pol - *pol1);
 			pol2->Show();
+			cout << endl;
 			break; 
 			}
 		case 3:
@@ -127,6 +128,7 @@ int main()
 			/*cout << (pol->ReSum() * pol1->ReSum()) << endl;*/
 			Polynomial *pol2 = (*pol * *pol1);
 			pol2->Show();
+			cout << endl;
 			break;
 			}
 		case 4:
@@ -136,6 +138,7 @@ int main()
 			/*cout << (pol->ReSum() = pol1->ReSum()) << endl;*/
 			Polynomial *pol2 = (*pol = *pol1);
 			pol2->Show();
+			cout << endl;
 			break;
 			}
 		default:

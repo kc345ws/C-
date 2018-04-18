@@ -19,7 +19,7 @@ Polynomial::Polynomial(int p)
 
 Polynomial::~Polynomial()
 {
-	/*delete[]Number;*/
+	delete[]Number;
 	std::cout << "多项式已释放" << std::endl;
 }
 
@@ -100,10 +100,12 @@ Polynomial* operator-(Polynomial & a, Polynomial & b)
 		for (i = 0; i < b.n; i++)
 		{
 			c->Number[i] = a.Number[i] - b.Number[i];
+			c->cishu.push_back(i);
 		}
 		for (int j = i; j < a.n; j++)
 		{
 			c->Number[j] = a.Number[j];
+			c->cishu.push_back(j);
 		}
 		d = c;
 	}
@@ -115,10 +117,12 @@ Polynomial* operator-(Polynomial & a, Polynomial & b)
 		for (i = 0; i < a.n; i++)
 		{
 			c->Number[i] = a.Number[i] - b.Number[i];
+			c->cishu.push_back(i);
 		}
 		for (int j = i; j < b.n; j++)
 		{
 			c->Number[j] = b.Number[j];
+			c->cishu.push_back(j);
 		}
 		d = c;
 	}

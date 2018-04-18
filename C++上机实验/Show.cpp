@@ -24,19 +24,21 @@ void Polynomial::Show()
 			/*cout << *(Polynomial::Number + i);*/
 			if (Polynomial::n == 1 || i == (Polynomial::n) - 1)//多项式第一项或最后一项
 			{
-				if (j == 0)//如果次数为1
+				if (j == 0)//如果次数为0
 					cout << *(Polynomial::Number + 0);
-				else if (*(Polynomial::Number + i) < 0)
+
+				else if (*(Polynomial::Number + i) < 0)//如果系数小于0
 				{
 					/*if (*(Polynomial::Number + i) != 1)
 						cout << *(Polynomial::Number + i) << "x^" << j;*/
 					/*if (*(Polynomial::Number + i) == 0)
 						cout << "+" << "0";*/
-					if(*(Polynomial::Number + i)==-1)
+					if(*(Polynomial::Number + i)==-1)//如果系数为-1
 						cout << "-" << "x^" << cishu[i];
-					else if(*(Polynomial::Number + i) != 0)
+					else if(*(Polynomial::Number + i) != 0)//如果系数不为0且小于0
 						cout << *(Polynomial::Number + i) << "x^" << cishu[i];
 				}
+
 				else
 				{
 					if (*(Polynomial::Number + i) == 1)
