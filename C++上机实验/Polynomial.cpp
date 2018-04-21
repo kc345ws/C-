@@ -54,7 +54,7 @@ Polynomial* operator*(Polynomial & a, Polynomial & b)
 		{
 			c->Number[i] = a.Number[i] * b.Number[i];
 			/*c->cishu[i] = a.cishu[i] * b.cishu[i];*/
-			c->cishu.push_back(a.cishu[i] * b.cishu[i]);
+			c->cishu.push_back(a.cishu[i] + b.cishu[i]);
 		}
 		for (int j = i; j < a.n; j++)
 		{
@@ -73,7 +73,7 @@ Polynomial* operator*(Polynomial & a, Polynomial & b)
 		{
 			c->Number[i] = a.Number[i] * b.Number[i];
 			/*c->cishu[i] = a.cishu[i] * b.cishu[i];*/
-			c->cishu.push_back(a.cishu[i] * b.cishu[i]);
+			c->cishu.push_back(a.cishu[i] + b.cishu[i]);
 		}
 		for (int j = i; j < b.n; j++)
 		{
